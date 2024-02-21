@@ -22,6 +22,27 @@ class MediaQueryTest extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    var height = MediaQuery.of(context).size.height;
+    return Scaffold(
+      body: Column(
+        children: [
+          Container(
+            height: height * 0.2,
+            width: 200,
+            color: Colors.redAccent,
+          ),
+          Container(
+            height: height * 0.2,
+            width: 200,
+            color: Colors.blueAccent,
+          ),
+          Container(
+            height: height * 0.2,
+            width: 200,
+            color: Colors.grey[500],
+          ),
+        ],
+      ),
+    );
   }
 }
