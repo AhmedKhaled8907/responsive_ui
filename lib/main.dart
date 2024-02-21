@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Responsive UI',
       theme: ThemeData.dark(),
       home: const HomeView(),
@@ -23,26 +24,32 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(automaticallyImplyLeading: true),
       body: Column(
         children: [
-          Expanded(
-            flex: 2,
-            child: Container(
-              color: Colors.redAccent,
+          const Flexible(
+            child: FittedBox(
+              child: Icon(
+                Icons.home,
+                size: 300,
+              ),
             ),
           ),
           Expanded(
-            flex: 1,
-            child: Container(
-              color: Colors.greenAccent,
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Container(
+                color: Colors.greenAccent,
+                // height: 150,
+                child: const Icon(
+                  Icons.horizontal_split_sharp,
+                  color: Colors.black,
+                ),
+              ),
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              color: Colors.blueAccent,
-            ),
+          Container(
+            height: 150,
+            color: Colors.blueAccent,
           ),
         ],
       ),
