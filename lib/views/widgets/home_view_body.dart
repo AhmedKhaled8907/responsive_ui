@@ -9,14 +9,16 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16).copyWith(top: 16),
-      child: const CustomScrollView(
+      child: CustomScrollView(
         slivers: [
-          CustomSliverGrid(),
-          CustomSliverListView(),
+          SliverToBoxAdapter(
+            child: LayoutBuilder(builder: (context, constarins) {
+              return const CustomSliverGrid();
+            }),
+          ),
+          const CustomSliverListView(),
         ],
       ),
     );
   }
 }
-
-
