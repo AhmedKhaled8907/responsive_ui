@@ -7,11 +7,14 @@ class TabletLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        CustomTabletListView(),
-        CustomSliverListView(),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16).copyWith(top: 16),
+      child: const CustomScrollView(
+        slivers: [
+          CustomTabletListView(),
+          CustomSliverListView(),
+        ],
+      ),
     );
   }
 }

@@ -7,12 +7,14 @@ class MobileLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        CustomSliverGrid(),
-        CustomSliverListView(),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16).copyWith(top: 16),
+      child: const CustomScrollView(
+        slivers: [
+          CustomSliverGrid(),
+          CustomSliverListView(),
+        ],
+      ),
     );
   }
 }
-

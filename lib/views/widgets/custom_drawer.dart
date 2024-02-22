@@ -8,6 +8,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      elevation: 0,
       backgroundColor: Colors.grey[500],
       child: const Column(
         children: [
@@ -25,4 +26,3 @@ class CustomDrawer extends StatelessWidget {
     );
   }
 }
-
