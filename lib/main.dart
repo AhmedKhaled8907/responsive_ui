@@ -23,33 +23,16 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> imagesList = [
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png',
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/800px-Instagram_logo_2022.svg.png',
-    ];
-
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.redAccent,
-      ),
-      body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          crossAxisSpacing: 4.0,
-          mainAxisSpacing: 4.0,
+        body: Align(
+      alignment: Alignment.topCenter,
+      child: AspectRatio(
+        aspectRatio: 1,
+        child: Container(
+          color: Colors.redAccent,
+          height: 150,
         ),
-        itemCount: imagesList.length,
-        itemBuilder: (BuildContext context, int index) {
-          return FittedBox(
-            child: Image.network(
-              imagesList[index],
-            ),
-          );
-        },
       ),
-    );
+    ));
   }
 }
