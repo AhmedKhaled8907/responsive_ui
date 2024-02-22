@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_ui/views/home_view.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -11,12 +10,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Responsive UI',
-      // theme: ThemeData.dark(),
-      home: HomeView(),
+      theme: ThemeData(
+        dividerTheme: const DividerThemeData(
+          color: Colors.transparent,
+        ),
+      ),
+      home: const HomeView(),
     );
   }
 }
-
