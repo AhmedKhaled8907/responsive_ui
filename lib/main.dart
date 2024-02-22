@@ -24,15 +24,55 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Align(
-      alignment: Alignment.topCenter,
-      child: AspectRatio(
-        aspectRatio: 1,
-        child: Container(
-          color: Colors.redAccent,
-          height: 150,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 100,
+            ),
+            // بيحدد الارتفاع على اساس اكبر (طفل) موجود عندك
+            // و لكن هى مكلفة في الاستخدام في ناحية الاداء
+            // ماتستخدمهاش مع الانميشن
+            IntrinsicHeight(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      color: Colors.redAccent,
+                      child: const Column(
+                        children: [
+                          SizedBox(height: 50),
+                          SizedBox(height: 50),
+                          SizedBox(height: 50),
+                          SizedBox(height: 50),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            color: Colors.blueAccent,
+                          ),
+                        ),
+                        const SizedBox(height: 25),
+                        Expanded(
+                          child: Container(
+                            color: Colors.blueGrey,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
         ),
       ),
-    ));
+    );
   }
 }
