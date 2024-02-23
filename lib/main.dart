@@ -1,8 +1,15 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:responsive_ui/views/home_view.dart';
+import 'package:responsive_ui/views/widgets/home_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+        enabled: true,
+        builder: (context) {
+          return const MyApp();
+        }),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,11 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Responsive UI',
-      theme: ThemeData(
-        dividerTheme: DividerThemeData(
-          color: Colors.grey[800],
-        ),
-      ),
+      theme: ThemeData.dark(),
       home: const HomeView(),
     );
   }
