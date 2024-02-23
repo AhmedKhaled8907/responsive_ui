@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Responsive UI',
       theme: ThemeData(
-        dividerTheme: const DividerThemeData(
-          color: Colors.transparent,
+        dividerTheme: DividerThemeData(
+          color: Colors.grey[800],
         ),
       ),
       home: const HomeView(),

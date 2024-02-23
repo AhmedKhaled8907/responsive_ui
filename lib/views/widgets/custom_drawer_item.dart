@@ -17,11 +17,15 @@ class CustomDrawerItem extends StatelessWidget {
         color: Colors.grey[800],
       ),
       horizontalTitleGap: 24,
-      title: Text(
-        drawerItemModel.title.toUpperCase(),
-        style: TextStyle(
-          color: Colors.grey[800],
-          fontSize: 20,
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          drawerItemModel.title.toUpperCase(),
+          style: TextStyle(
+            color: Colors.grey[800],
+            fontSize: 20,
+          ),
         ),
       ),
     );
