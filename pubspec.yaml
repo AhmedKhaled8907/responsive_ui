@@ -32,6 +32,7 @@ dependencies:
   device_preview: ^1.1.0
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.10+1
   font_awesome_flutter: ^10.7.0
 
 dev_dependencies:
@@ -64,13 +65,10 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: assets/fonts/Montserrat-VariableFont_wght.ttf
-
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-
 flutter_assets:
   assets_path: assets/images
   output_path: lib/utils
   filename: app_images.dart
-  field_prefix:
+  field_prefix: null
