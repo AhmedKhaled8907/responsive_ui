@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_ui/utils/app_images.dart';
 import 'package:responsive_ui/views/widgets/user_info_list_tile.dart';
 
+import 'drawer_bottom_section.dart';
 import 'drawer_item_list_view.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -11,17 +12,25 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: const Column(
-        children: [
-          UserInfoListTile(
-            image: Assets.imagesAvatar3,
-            title: 'Lekan Okeowo',
-            subtitle: 'demo@gmail.com',
+      child: const CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserInfoListTile(
+              image: Assets.imagesAvatar3,
+              title: 'Lekan Okeowo',
+              subtitle: 'demo@gmail.com',
+            ),
           ),
-          SizedBox(
-            height: 8,
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 8,
+            ),
           ),
           DrawerItemListView(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: DrawerBottomSection(),
+          ),
         ],
       ),
     );
