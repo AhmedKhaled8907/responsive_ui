@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_ui/models/drawer_item_model.dart';
-import 'package:responsive_ui/views/widgets/drawer_item.dart';
+import 'package:responsive_ui/views/widgets/custom_drawer/drawer_item.dart';
 
 class DrawerItemListView extends StatefulWidget {
   const DrawerItemListView({super.key});
