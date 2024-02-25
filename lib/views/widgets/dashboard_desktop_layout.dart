@@ -11,7 +11,12 @@ class DashboardDesktopLayout extends StatelessWidget {
       children: [
         const Expanded(child: CustomDrawer()),
         const Expanded(flex: 3, child: AllExpenses()),
-        Expanded(flex: 2, child: Container(color: Colors.greenAccent)),
+        Expanded(
+          flex: 2,
+          child: Container(
+            color: const Color.fromARGB(255, 25, 70, 48),
+          ),
+        ),
       ],
     );
   }
