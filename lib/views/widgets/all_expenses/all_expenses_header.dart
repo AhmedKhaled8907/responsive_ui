@@ -16,8 +16,6 @@ class AllExpensesHeader extends StatelessWidget {
           style: AppStyles.styleSemiBold20,
         ),
         RangeOptions(),
-        SizedBox(height: 16),
-        
       ],
     );
   }
