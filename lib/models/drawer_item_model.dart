@@ -10,9 +10,24 @@ class DrawerItemModel {
 }
 
 List<DrawerItemModel> draweritemsList = [
-  DrawerItemModel(image: Assets.imagesDashboard, title: 'Dashboard'),
-  DrawerItemModel(image: Assets.imagesMyTransctions, title: 'My Transaction'),
-  DrawerItemModel(image: Assets.imagesStatistics, title: 'Statistics'),
-  DrawerItemModel(image: Assets.imagesWalletAccount, title: 'Wallet Account'),
-  DrawerItemModel(image: Assets.imagesMyInvestments, title: 'My Investments'),
+  DrawerItemModel(
+    image: Assets.imagesDashboard,
+    title: 'Dashboard',
+  ),
+  DrawerItemModel(
+    image: Assets.imagesMyTransctions,
+    title: 'My Transaction',
+  ),
+  DrawerItemModel(
+    image: Assets.imagesStatistics,
+    title: 'Statistics',
+  ),
+  DrawerItemModel(
+    image: Assets.imagesWalletAccount,
+    title: 'Wallet Account',
+  ),
+  DrawerItemModel(
+    image: Assets.imagesMyInvestments,
+    title: 'My Investments',
+  ),
 ];

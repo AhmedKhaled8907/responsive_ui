@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:responsive_ui/models/user_info_model.dart';
 import 'package:responsive_ui/utils/app_styles.dart';
 
 class UserInfoListTile extends StatelessWidget {
   const UserInfoListTile({
     super.key,
-    required this.title,
-    required this.subtitle,
-    required this.image,
+    required this.userInfoModel,
   });
 
-  final String title, subtitle, image;
+  final UserInfoModel userInfoModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,12 +19,12 @@ class UserInfoListTile extends StatelessWidget {
         shape: const StadiumBorder(),
         elevation: 0,
         child: ListTile(
-          leading: SvgPicture.asset(image),
+          leading: SvgPicture.asset(userInfoModel.image),
           title: FittedBox(
             fit: BoxFit.scaleDown,
             alignment: Alignment.centerLeft,
             child: Text(
-              title,
+              userInfoModel.title,
               style: AppStyles.styleSemiBold16,
             ),
           ),
@@ -33,7 +32,7 @@ class UserInfoListTile extends StatelessWidget {
             fit: BoxFit.scaleDown,
             alignment: Alignment.centerLeft,
             child: Text(
-              subtitle,
+              userInfoModel.subtitle,
               style: AppStyles.styleRegular12,
             ),
           ),
