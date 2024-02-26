@@ -70,33 +70,33 @@ class ActiveAllExpensesItem extends StatelessWidget {
         horizontal: 20,
       ),
       decoration: BoxDecoration(
-        border: Border.all(
-          color: const Color(0xffF1F1F1),
-          width: 1,
-        ),
         borderRadius: BorderRadius.circular(12),
-        color: Colors.white,
+        color: const Color(0xff4EB7F2),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensesItemHeader(
             image: itemModel.image,
+            imageBackground: Colors.white.withOpacity(0.1),
+            imageColor: Colors.white,
           ),
           const SizedBox(height: 34),
           Text(
             itemModel.title,
-            style: AppStyles.styleSemiBold16,
+            style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
           ),
           const SizedBox(height: 8),
           Text(
             itemModel.date,
-            style: AppStyles.styleRegular14,
+            style: AppStyles.styleRegular14.copyWith(
+              color: const Color(0xffFAFAFA),
+            ),
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 8),
           Text(
             itemModel.price,
-            style: AppStyles.styleSemiBold24,
+            style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
           ),
         ],
       ),
