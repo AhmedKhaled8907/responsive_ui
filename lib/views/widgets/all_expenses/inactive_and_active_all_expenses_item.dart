@@ -43,7 +43,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
             itemModel.date,
             style: AppStyles.styleRegular14,
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 8),
           Text(
             itemModel.price,
             style: AppStyles.styleSemiBold24,
