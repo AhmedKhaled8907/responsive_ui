@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_ui/utils/app_styles.dart';
 import 'package:responsive_ui/views/widgets/quick_invoice/latest_transaction_list_view.dart';
 
-class LatestTransaction extends StatelessWidget {
-  const LatestTransaction({super.key});
+class LatestTransactionSection extends StatelessWidget {
+  const LatestTransactionSection({super.key});
 
   @override
   Widget build(BuildContext context) {
