@@ -13,27 +13,31 @@ class UserInfoListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
       child: Card(
         color: const Color(0xfffafafa),
-        shape: const StadiumBorder(),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
         elevation: 0,
-        child: ListTile(
-          leading: SvgPicture.asset(userInfoModel.image),
-          title: FittedBox(
-            fit: BoxFit.scaleDown,
-            alignment: Alignment.centerLeft,
-            child: Text(
-              userInfoModel.title,
-              style: AppStyles.styleSemiBold16,
+        child: Center(
+          child: ListTile(
+            leading: SvgPicture.asset(userInfoModel.image),
+            title: FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                userInfoModel.title,
+                style: AppStyles.styleSemiBold16,
+              ),
             ),
-          ),
-          subtitle: FittedBox(
-            fit: BoxFit.scaleDown,
-            alignment: Alignment.centerLeft,
-            child: Text(
-              userInfoModel.subtitle,
-              style: AppStyles.styleRegular12,
+            subtitle: FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                userInfoModel.subtitle,
+                style: AppStyles.styleRegular12,
+              ),
             ),
           ),
         ),
