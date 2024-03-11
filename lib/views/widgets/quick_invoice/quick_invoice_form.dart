@@ -50,7 +50,17 @@ class QuickInvoiceForm extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: CustomButton(),
+              child: CustomButton(
+                text: 'Add more details',
+                textColor: Color(0xff4EB7F2),
+                backgroundColor: Colors.transparent,
+              ),
+            ),
+            SizedBox(width: 24),
+            Expanded(
+              child: CustomButton(
+                text: 'Send Money',
+              ),
             ),
           ],
         )
@@ -58,4 +68,3 @@ class QuickInvoiceForm extends StatelessWidget {
     );
   }
 }
-
