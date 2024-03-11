@@ -33,7 +33,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
           AllExpensesItemHeader(
             image: itemModel.image,
           ),
-          const SizedBox(height: 34),
+          const SizedBox(height: 16),
           Text(
             itemModel.title,
             style: AppStyles.styleSemiBold16,
@@ -81,7 +81,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             imageBackground: Colors.white.withOpacity(0.1),
             imageColor: Colors.white,
           ),
-          const SizedBox(height: 34),
+          const SizedBox(height: 16),
           Text(
             itemModel.title,
             style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
