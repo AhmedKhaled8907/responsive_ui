@@ -21,6 +21,10 @@ class Assets {
   /// assets/images/card_background.svg
   static const String imagesCardBackground = "assets/images/card_background.svg";
 
+  /// Assets for imagesCardBackground1
+  /// assets/images/card_background_1.png
+  static const String imagesCardBackground1 = "assets/images/card_background_1.png";
+
   /// Assets for imagesDashboard
   /// assets/images/dashboard.svg
   static const String imagesDashboard = "assets/images/dashboard.svg";
