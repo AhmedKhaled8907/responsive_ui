@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../../utils/app_styles.dart';
-import '../custom_background_container.dart';
 import 'dots_indicator.dart';
 import 'my_card_page_view.dart';
+
+
 
 class MyCardSection extends StatefulWidget {
   const MyCardSection({super.key});
@@ -28,24 +29,22 @@ class _MyCardSectionState extends State<MyCardSection> {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackgroundContainer(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text(
-            'My Card',
-            style: AppStyles.styleSemiBold20,
-          ),
-          const SizedBox(height: 20),
-          MyCardPageView(
-            pageController: pageController,
-          ),
-          const SizedBox(height: 20),
-          DotsIndicator(
-            currentPageIndex: currentPageIndex,
-          ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'My Card',
+          style: AppStyles.styleSemiBold20,
+        ),
+        const SizedBox(height: 20),
+        MyCardPageView(
+          pageController: pageController,
+        ),
+        const SizedBox(height: 20),
+        DotsIndicator(
+          currentPageIndex: currentPageIndex,
+        ),
+      ],
     );
   }
 }
