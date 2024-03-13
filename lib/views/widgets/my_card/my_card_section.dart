@@ -5,23 +5,45 @@ import '../custom_background_container.dart';
 import 'dots_indicator.dart';
 import 'my_card_page_view.dart';
 
-class MyCardSection extends StatelessWidget {
+class MyCardSection extends StatefulWidget {
   const MyCardSection({super.key});
 
   @override
+  State<MyCardSection> createState() => _MyCardSectionState();
+}
+
+class _MyCardSectionState extends State<MyCardSection> {
+  late PageController pageController;
+  int currentPageIndex = 0;
+
+  @override
+  void initState() {
+    pageController = PageController();
+    pageController.addListener(() {
+      currentPageIndex = pageController.page!.round();
+      setState(() {});
+    });
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const CustomBackgroundContainer(
+    return CustomBackgroundContainer(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'My Card',
             style: AppStyles.styleSemiBold20,
           ),
-          SizedBox(height: 20),
-          MyCardPageView(),
-          SizedBox(height: 16),
-          DotsIndicator(),
+          const SizedBox(height: 20),
+          MyCardPageView(
+            pageController: pageController,
+          ),
+          const SizedBox(height: 20),
+          DotsIndicator(
+            currentPageIndex: currentPageIndex,
+          ),
         ],
       ),
     );
