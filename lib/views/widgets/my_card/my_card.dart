@@ -15,6 +15,7 @@ class MyCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
         decoration: ShapeDecoration(
           image: const DecorationImage(
+            fit: BoxFit.fill,
             image: AssetImage(Assets.imagesCardBackground1),
           ),
           shape: RoundedRectangleBorder(
@@ -52,7 +53,7 @@ class MyCard extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   '12/20 - 124',
-                  style: AppStyles.styleRegular14.copyWith(color: Colors.white),
+                  style: AppStyles.styleRegular12.copyWith(color: Colors.white),
                 ),
               ],
             ),
