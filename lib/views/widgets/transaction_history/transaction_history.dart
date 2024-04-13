@@ -1,36 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_ui/utils/app_styles.dart';
+import 'package:responsive_ui/views/widgets/transaction_history/transaction_item.dart';
+
+import 'transaction_history_header.dart';
 
 class TransactionHistory extends StatelessWidget {
   const TransactionHistory({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const Text(
-              'Transaction History',
-              style: AppStyles.styleSemiBold20,
-            ),
-            Text(
-              'See All',
-              style: AppStyles.styleRegular14.copyWith(
-                color: const Color(0xff4EB7F2),
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 20),
-        const Text(
+        TransactionHistoryHeader(),
+        SizedBox(height: 20),
+        Text(
           '13 April 2022',
           style: AppStyles.styleRegular14,
         ),
-        const SizedBox(height: 16),
-        
+        SizedBox(height: 16),
+        // TransactionItem(),
       ],
     );
   }
