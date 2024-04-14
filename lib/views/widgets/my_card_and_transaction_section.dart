@@ -12,11 +12,15 @@ class MyCardAndTransactionSection extends StatelessWidget {
     return const CustomBackgroundContainer(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           MyCardSection(),
           SizedBox(height: 10),
-          Divider(
-            color: Color(0xffF1F1F1),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 2),
+            child: Divider(
+              color: Color(0xffF1F1F1),
+            ),
           ),
           SizedBox(height: 10),
           TransactionHistory(),

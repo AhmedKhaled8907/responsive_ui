@@ -4,8 +4,6 @@ import '../../../utils/app_styles.dart';
 import 'dots_indicator.dart';
 import 'my_card_page_view.dart';
 
-
-
 class MyCardSection extends StatefulWidget {
   const MyCardSection({super.key});
 
@@ -36,11 +34,11 @@ class _MyCardSectionState extends State<MyCardSection> {
           'My Card',
           style: AppStyles.styleSemiBold20,
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 10),
         MyCardPageView(
           pageController: pageController,
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 16),
         DotsIndicator(
           currentPageIndex: currentPageIndex,
         ),

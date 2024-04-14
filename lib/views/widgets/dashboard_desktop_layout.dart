@@ -24,10 +24,12 @@ class DashboardDesktopLayout extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.only(
                 right: 32,
-                top: 40,
-                bottom: 40,
+                // top: 40,
+                // bottom: 40,
               ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   MyCardAndTransactionSection(),
                 ],
