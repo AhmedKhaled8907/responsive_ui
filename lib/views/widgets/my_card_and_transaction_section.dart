@@ -14,12 +14,11 @@ class MyCardAndTransactionSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           MyCardSection(),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 20),
-            child: Divider(
-              color: Color(0xffF1F1F1),
-            ),
+          SizedBox(height: 10),
+          Divider(
+            color: Color(0xffF1F1F1),
           ),
+          SizedBox(height: 10),
           TransactionHistory(),
         ],
       ),
