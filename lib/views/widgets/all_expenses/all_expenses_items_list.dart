@@ -29,7 +29,7 @@ class _AllExpensesItemsListState extends State<AllExpensesItemsList> {
 
         // so we use asMap to get access to the index to give padding to
         // a sepecific item of the list
-      Row(
+        Row(
       children: items.asMap().entries.map((e) {
         int index = e.key;
         var item = e.value;
@@ -40,7 +40,7 @@ class _AllExpensesItemsListState extends State<AllExpensesItemsList> {
             },
             child: Padding(
               padding: index == 1
-                  ? const EdgeInsets.symmetric(horizontal: 12)
+                  ? const EdgeInsets.symmetric(horizontal: 6)
                   : EdgeInsets.zero,
               child: AllExpensesItem(
                 itemModel: item,
