@@ -15,15 +15,9 @@ class InActiceDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Expanded(
-        child: FittedBox(
-          fit: BoxFit.scaleDown,
-          alignment: Alignment.centerLeft,
-          child: Text(
-            drawerItemModel.title,
-            style: AppStyles.styleRegular16,
-          ),
-        ),
+      title: Text(
+        drawerItemModel.title,
+        style: AppStyles.styleRegular16,
       ),
     );
   }
@@ -41,15 +35,9 @@ class ActiceDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Expanded(
-        child: FittedBox(
-          fit: BoxFit.scaleDown,
-          alignment: Alignment.centerLeft,
-          child: Text(
-            drawerItemModel.title,
-            style: AppStyles.styleBold16,
-          ),
-        ),
+      title: Text(
+        drawerItemModel.title,
+        style: AppStyles.styleBold16,
       ),
       trailing: Container(
         width: 4,
