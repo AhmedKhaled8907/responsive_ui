@@ -5,9 +5,7 @@ import '../../../utils/app_images.dart';
 import 'active_inactive_drawer_item.dart';
 
 class DrawerBottomSection extends StatelessWidget {
-  const DrawerBottomSection({
-    super.key,
-  });
+  const DrawerBottomSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +27,7 @@ class DrawerBottomSection extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(
-          height: 48,
-        ),
+        const SizedBox(height: 48),
       ],
     );
   }

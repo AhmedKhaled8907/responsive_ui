@@ -7,12 +7,17 @@ class TransactionHistoryListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: transactionitems.length,
-      shrinkWrap: true,
-      itemBuilder: (context, index) => TransactionItem(
-        transactionModel: transactionitems[index],
-      ),
+    return Column(
+      children: transactionitems
+          .map((e) => TransactionItem(transactionModel: e))
+          .toList(),
     );
+    // ListView.builder(
+    //   itemCount: transactionitems.length,
+    //   shrinkWrap: true,
+    //   itemBuilder: (context, index) => TransactionItem(
+    //     transactionModel: transactionitems[index],
+    //   ),
+    // );
   }
 }
