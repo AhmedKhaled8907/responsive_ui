@@ -15,7 +15,7 @@ class DashboardDesktopLayout extends StatelessWidget {
     return const Row(
       children: [
         Expanded(child: CustomDrawer()),
-        SizedBox(width: 32),
+        SizedBox(width: 16),
         Expanded(
           flex: 5,
           child: CustomScrollView(
@@ -27,18 +27,18 @@ class DashboardDesktopLayout extends StatelessWidget {
                     Expanded(
                       flex: 3,
                       child: Padding(
-                        padding: EdgeInsets.only(top: 40),
+                        padding: EdgeInsets.only(top: 20),
                         child: AllExpensesAndQuickInvoiceSection(),
                       ),
                     ),
-                    SizedBox(width: 32),
+                    SizedBox(width: 16),
                     Expanded(
                       flex: 2,
                       child: Padding(
                         padding: EdgeInsets.only(
-                          right: 32,
-                          top: 40,
-                          bottom: 40,
+                          right: 16,
+                          top: 20,
+                          bottom: 20,
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,

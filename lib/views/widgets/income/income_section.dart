@@ -17,15 +17,27 @@ class IncomeSection extends StatelessWidget {
         children: [
           IncomeSectionHeader(),
           SizedBox(height: 16),
-          Row(
+          IncomeSectionBody(),
+        ],
+      ),
+    );
+  }
+}
+
+class IncomeSectionBody extends StatelessWidget {
+  const IncomeSectionBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
+    return width >= 1100 && width <= 1285
+        ? const SizedBox()
+        : const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(child: IncomeChart()),
               Expanded(child: IncomeDetails()),
             ],
-          ),
-        ],
-      ),
-    );
+          );
   }
 }

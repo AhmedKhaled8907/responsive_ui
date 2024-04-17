@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_ui/models/income_details_model.dart';
 import 'package:responsive_ui/utils/app_styles.dart';
@@ -7,6 +9,7 @@ class IncomeDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log(MediaQuery.sizeOf(context).width.toString());
     return Column(
       children: incomeItemsList
           .map((e) => IncomeItemDetails(incomeDetailsModel: e))
