@@ -36,7 +36,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         PieChartSectionData(
           title: activeIndex == 0 ? incomeItemsList[0].title : '40%',
           titlePositionPercentageOffset: activeIndex == 0 ? 1.5 : null,
-          titleStyle: AppStyles.styleMedium16
+          titleStyle: AppStyles.styleMedium16(context)
               .copyWith(color: activeIndex == 0 ? null : Colors.white),
           value: 40,
           color: const Color(0xff208CC8),
@@ -45,7 +45,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         PieChartSectionData(
           title: activeIndex == 1 ? incomeItemsList[1].title : '25%',
           titlePositionPercentageOffset: activeIndex == 1 ? 1.5 : null,
-          titleStyle: AppStyles.styleMedium16
+          titleStyle: AppStyles.styleMedium16(context)
               .copyWith(color: activeIndex == 1 ? null : Colors.white),
           value: 25,
           color: const Color(0xff4EB7F2),
@@ -54,7 +54,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         PieChartSectionData(
           title: activeIndex == 2 ? incomeItemsList[2].title : '20%',
           titlePositionPercentageOffset: activeIndex == 2 ? 1.5 : null,
-          titleStyle: AppStyles.styleMedium16
+          titleStyle: AppStyles.styleMedium16(context)
               .copyWith(color: activeIndex == 2 ? null : Colors.white),
           value: 20,
           color: const Color(0xff064061),
@@ -63,7 +63,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
         PieChartSectionData(
           title: activeIndex == 3 ? incomeItemsList[3].title : '22%',
           titlePositionPercentageOffset: activeIndex == 3 ? 1.5 : null,
-          titleStyle: AppStyles.styleMedium16
+          titleStyle: AppStyles.styleMedium16(context)
               .copyWith(color: activeIndex == 3 ? null : Colors.white),
           value: 22,
           color: const Color(0xffE2DECD),
