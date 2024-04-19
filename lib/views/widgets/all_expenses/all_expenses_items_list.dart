@@ -30,24 +30,43 @@ class _AllExpensesItemsListState extends State<AllExpensesItemsList> {
         // so we use asMap to get access to the index to give padding to
         // a sepecific item of the list
         Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-              updateIndex(index);
+              updateIndex(0);
             },
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 6 : 0),
-              child: AllExpensesItem(
-                itemModel: item,
-                isActive: selectedIndex == index,
-              ),
+            child: AllExpensesItem(
+              isActive: selectedIndex == 0,
+              itemModel: items[0],
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpensesItem(
+              isActive: selectedIndex == 1,
+              itemModel: items[1],
+            ),
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpensesItem(
+              isActive: selectedIndex == 2,
+              itemModel: items[2],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

@@ -13,9 +13,11 @@ class DashboardMobileLayout extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           AllExpensesAndQuickInvoiceSection(),
+          SizedBox(height: 20),
           MyCardAndTransactionSection(),
           SizedBox(height: 20),
           IncomeSection(),
+          SizedBox(height: 20),
         ],
       ),
     );

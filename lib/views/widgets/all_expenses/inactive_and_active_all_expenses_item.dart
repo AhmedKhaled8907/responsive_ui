@@ -34,19 +34,31 @@ class InActiveAllExpensesItem extends StatelessWidget {
             image: itemModel.image,
           ),
           const SizedBox(height: 16),
-          Text(
-            itemModel.title,
-            style: AppStyles.styleSemiBold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              itemModel.title,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
           const SizedBox(height: 8),
-          Text(
-            itemModel.date,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              itemModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(height: 8),
-          Text(
-            itemModel.price,
-            style: AppStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              itemModel.price,
+              style: AppStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),
@@ -72,6 +84,10 @@ class ActiveAllExpensesItem extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: const Color(0xff4EB7F2),
+        border: Border.all(
+          color: const Color(0xff4EB7F2),
+          width: 1,
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,21 +98,35 @@ class ActiveAllExpensesItem extends StatelessWidget {
             imageColor: Colors.white,
           ),
           const SizedBox(height: 16),
-          Text(
-            itemModel.title,
-            style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            itemModel.date,
-            style: AppStyles.styleRegular14(context).copyWith(
-              color: const Color(0xffFAFAFA),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              itemModel.title,
+              style: AppStyles.styleSemiBold16(context)
+                  .copyWith(color: Colors.white),
             ),
           ),
           const SizedBox(height: 8),
-          Text(
-            itemModel.price,
-            style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              itemModel.date,
+              style: AppStyles.styleRegular14(context).copyWith(
+                color: const Color(0xffFAFAFA),
+              ),
+            ),
+          ),
+          const SizedBox(height: 8),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: AlignmentDirectional.centerStart,
+            child: Text(
+              itemModel.price,
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
         ],
       ),
