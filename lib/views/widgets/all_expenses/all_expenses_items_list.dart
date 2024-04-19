@@ -39,9 +39,7 @@ class _AllExpensesItemsListState extends State<AllExpensesItemsList> {
               updateIndex(index);
             },
             child: Padding(
-              padding: index == 1
-                  ? const EdgeInsets.symmetric(horizontal: 6)
-                  : EdgeInsets.zero,
+              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 6 : 0),
               child: AllExpensesItem(
                 itemModel: item,
                 isActive: selectedIndex == index,
