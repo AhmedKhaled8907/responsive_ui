@@ -13,7 +13,7 @@ class UserInfoListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Card(
         color: const Color(0xfffafafa),
         shape: RoundedRectangleBorder(
@@ -25,7 +25,7 @@ class UserInfoListTile extends StatelessWidget {
             leading: SvgPicture.asset(userInfoModel.image),
             title: FittedBox(
               fit: BoxFit.scaleDown,
-              alignment: Alignment.centerLeft,
+              alignment: AlignmentDirectional.centerStart,
               child: Text(
                 userInfoModel.title,
                 style: AppStyles.styleSemiBold16(context),
@@ -33,7 +33,7 @@ class UserInfoListTile extends StatelessWidget {
             ),
             subtitle: FittedBox(
               fit: BoxFit.scaleDown,
-              alignment: Alignment.centerLeft,
+              alignment: AlignmentDirectional.centerStart,
               child: Text(
                 userInfoModel.subtitle,
                 style: AppStyles.styleRegular12(context),
